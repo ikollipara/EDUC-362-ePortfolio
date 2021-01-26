@@ -19,7 +19,7 @@ function Reflection() {
   const router = useRouter();
   const { id } = router.query;
 
-  const [slug, setSlug] = useState<Reflection>({ title: "", id: id });
+  const [slug, setSlug] = useState<Reflection>({ title: "", body: "" });
 
   useEffect(() => {
     fetch(`/api/reflections/${id}`)
