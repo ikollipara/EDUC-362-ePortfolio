@@ -6,7 +6,7 @@
 
 // Imports
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
-import Image from "next/image";
+import fetch from "isomorphic-unfetch";
 import Link from "next/link";
 import Header from "../../components/header";
 import { MongoReflection } from "../../utils/typedefs.js";
@@ -57,6 +57,7 @@ function Index({
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const res = await fetch("https://eportfolio.vercel.app/api/reflection");
+  console.log(res);
   const json = await res.json();
   const reflections: Omit<MongoReflection, "_id"> = json.reflections;
   return {

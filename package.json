@@ -11,6 +11,7 @@
     "@deskeen/markdown": "^4.0.1",
     "animate.css": "^4.1.1",
     "bootstrap": "^4.6.0",
+    "isomorphic-unfetch": "^3.1.0",
     "mongodb": "^3.6.3",
     "next": "10.0.5",
     "next-auth": "^3.1.0",
