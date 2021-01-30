@@ -7,7 +7,6 @@
 // Imports
 import Image from "next/image";
 import Header from "../components/header";
-import styles from "../styles/about.module.css";
 
 function AboutMe() {
   return (

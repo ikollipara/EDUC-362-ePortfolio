@@ -2,7 +2,6 @@ import { NextApiResponse } from "next";
 import nextConnect from "next-connect";
 import middleware from "../../../middleware/database";
 import {
-  Reflection,
   MongoReflection,
   NextWithMongoApiRequest,
 } from "../../../utils/typedefs.js";
