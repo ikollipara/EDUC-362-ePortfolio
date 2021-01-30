@@ -6,7 +6,6 @@
 
 // Imports
 import Head from "next/head";
-import { Jumbotron } from "react-bootstrap";
 import Footer from "../components/footer";
 import Header from "../components/header";
 import styles from "../styles/home.module.css";

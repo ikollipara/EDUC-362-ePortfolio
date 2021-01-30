@@ -6,42 +6,62 @@
 
 // Imports
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Header from "../../components/header";
+import { MongoReflection } from "../../utils/typedefs.js";
+import styles from "../../styles/reflections.module.css";
+import Head from "next/head";
+import { ListGroup } from "react-bootstrap";
 
 function Index({
   reflections,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   return (
     <main>
+      <Head>
+        <title>Reflections</title>
+      </Head>
       <Header />
-      <ul>
-        {reflections.map((reflection) => (
-          <li key={reflection.id}>
-            <Link
-              href={{
-                pathname: "/reflections/[id]",
-                query: { id: reflection.id },
-              }}
-            >
-              <a>{reflection.title}</a>
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <div
+        className={`jumbotron-fluid bg-light text-white text-center ${styles.heroImage}`}
+      >
+        <div className="d-flex flex-column align-items-center">
+          <h1 className="display-2">Reflections</h1>
+        </div>
+      </div>
+      <div className="container">
+        <div className="row">
+          <span className="col-1"></span>
+          <div className="col-10">
+            <ListGroup variant="flush">
+              {reflections.map((reflection: Omit<MongoReflection, "_id">) => (
+                <ListGroup.Item key={reflection.id} className="text-center">
+                  <Link
+                    href={{
+                      pathname: "/reflections/[id]",
+                      query: { id: reflection.id },
+                    }}
+                  >
+                    <a className={`lead ${styles.link}`}>{reflection.title}</a>
+                  </Link>
+                </ListGroup.Item>
+              ))}
+            </ListGroup>
+          </div>
+        </div>
+      </div>
     </main>
   );
 }
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
+  const res = await fetch("https://eportfolio.vercel.app/api/reflection");
+  const json = await res.json();
+  const reflections: Omit<MongoReflection, "_id"> = json.reflections;
   return {
     props: {
-      reflections: [
-        {
-          id: 1,
-          title: "Lorem Ipsum",
-        },
-      ],
+      reflections: reflections,
     },
   };
 };

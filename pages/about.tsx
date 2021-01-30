@@ -19,6 +19,7 @@ function AboutMe() {
         objectFit="cover"
         width={720}
         height={100}
+        priority={true}
       />
       <div className="container">
         <div className="row">
