@@ -5,6 +5,7 @@ import {
   MongoReflection,
   NextWithMongoApiRequest,
 } from "../../../utils/typedefs.js";
+import md from "@deskeen/markdown";
 
 const reflectionHandler = nextConnect<
   NextWithMongoApiRequest,
@@ -19,7 +20,7 @@ reflectionHandler.get(async (req, res) => {
     .find<MongoReflection>()
     .map((reflection) => ({
       title: reflection.title,
-      body: reflection.body,
+      body: md.parse(reflection.body).innerHTML,
       id: reflection.id,
       author: reflection.author,
       date: reflection.date,

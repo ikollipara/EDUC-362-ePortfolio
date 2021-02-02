@@ -36,15 +36,34 @@ function Index({
           <div className="col-10">
             <ListGroup variant="flush">
               {reflections.map((reflection: Omit<MongoReflection, "_id">) => (
-                <ListGroup.Item key={reflection.id} className="text-center">
-                  <Link
-                    href={{
-                      pathname: "/reflections/[id]",
-                      query: { id: reflection.id },
-                    }}
-                  >
-                    <a className={`lead ${styles.link}`}>{reflection.title}</a>
-                  </Link>
+                <ListGroup.Item key={reflection.id} className="container">
+                  <div className="row">
+                    <div className="col-12 text-center">
+                      <Link
+                        href={{
+                          pathname: "/reflections/[id]",
+                          query: { id: reflection.id },
+                        }}
+                      >
+                        <a className={`lead ${styles.link}`}>
+                          {reflection.title}
+                        </a>
+                      </Link>
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div className="col-12">
+                      <div className="d-flex flex-row justify-content-between">
+                        <p className="lead text-muted">{reflection.date}</p>
+                        <p className="lead text-muted">{reflection.author}</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div className="col-12">
+                      <p className="text-muted ellipsis">{reflection.body}</p>
+                    </div>
+                  </div>
                 </ListGroup.Item>
               ))}
             </ListGroup>
@@ -57,7 +76,7 @@ function Index({
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const res = await fetch("https://eportfolio.vercel.app/api/reflection");
-  console.log(res);
+  console;
   const json = await res.json();
   const reflections: Omit<MongoReflection, "_id"> = json.reflections;
   return {

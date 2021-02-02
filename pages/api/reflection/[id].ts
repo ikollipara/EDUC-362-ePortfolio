@@ -5,6 +5,7 @@ import {
   MongoReflection,
   NextWithMongoApiRequest,
 } from "../../../utils/typedefs.js";
+import md from "@deskeen/markdown";
 
 const idHandler = nextConnect<NextWithMongoApiRequest, NextApiResponse>();
 
@@ -19,7 +20,9 @@ idHandler.get(async (req, res) => {
     id: id,
   });
 
-  res.json(doc);
+  const response = { ...doc, body: md.parse(doc.body).innerHTML };
+
+  res.json(response);
 });
 
 export default idHandler;
