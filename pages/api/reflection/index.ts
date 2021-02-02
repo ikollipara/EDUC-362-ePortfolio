@@ -20,7 +20,7 @@ reflectionHandler.get(async (req, res) => {
     .find<MongoReflection>()
     .map((reflection) => ({
       title: reflection.title,
-      body: md.parse(reflection.body).innerHTML,
+      body: reflection.body,
       id: reflection.id,
       author: reflection.author,
       date: reflection.date,
