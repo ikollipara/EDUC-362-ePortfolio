@@ -20,4 +20,13 @@ type Reflection = {
 
 type MongoReflection = Reflection & { _id: unknown; date: string };
 
-export type { Id, NextWithMongoApiRequest, Maybe, Reflection, MongoReflection };
+type DisplayReflection = Reflection & { date: string };
+
+export type {
+  Id,
+  NextWithMongoApiRequest,
+  Maybe,
+  Reflection,
+  MongoReflection,
+  DisplayReflection,
+};

@@ -5,7 +5,7 @@
  */
 
 // Imports
-import { MongoReflection, Reflection } from "../../utils/typedefs";
+import { MongoReflection, DisplayReflection } from "../../utils/typedefs";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Header from "../../components/header";
@@ -13,7 +13,7 @@ import Header from "../../components/header";
 function ReflectionPage() {
   const router = useRouter();
   const { id } = router.query;
-  const [slug, setSlug] = useState<Omit<Reflection & MongoReflection, "_id">>({
+  const [slug, setSlug] = useState<DisplayReflection>({
     title: "",
     id: "",
     body: "",
@@ -43,7 +43,7 @@ function ReflectionPage() {
         <div className="row">
           <span className="col-1"></span>
           <article
-            className="col-10 lead"
+            className={`col-10`}
             dangerouslySetInnerHTML={{ __html: slug.body }}
           ></article>
         </div>

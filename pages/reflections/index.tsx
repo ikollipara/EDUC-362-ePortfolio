@@ -9,7 +9,7 @@ import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import fetch from "isomorphic-unfetch";
 import Link from "next/link";
 import Header from "../../components/header";
-import { MongoReflection } from "../../utils/typedefs.js";
+import { DisplayReflection, MongoReflection } from "../../utils/typedefs";
 import styles from "../../styles/reflections.module.css";
 import Head from "next/head";
 import { ListGroup } from "react-bootstrap";
@@ -35,35 +35,21 @@ function Index({
           <span className="col-1"></span>
           <div className="col-10">
             <ListGroup variant="flush">
-              {reflections.map((reflection: Omit<MongoReflection, "_id">) => (
-                <ListGroup.Item key={reflection.id} className="container">
-                  <div className="row">
-                    <div className="col-12 text-center">
-                      <Link
-                        href={{
-                          pathname: "/reflections/[id]",
-                          query: { id: reflection.id },
-                        }}
-                      >
-                        <a className={`lead ${styles.link}`}>
-                          {reflection.title}
-                        </a>
-                      </Link>
-                    </div>
-                  </div>
-                  <div className="row">
-                    <div className="col-12">
-                      <div className="d-flex flex-row justify-content-between">
-                        <p className="lead text-muted">{reflection.date}</p>
-                        <p className="lead text-muted">{reflection.author}</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="row">
-                    <div className="col-12">
-                      <p className="text-muted ellipsis">{reflection.body}</p>
-                    </div>
-                  </div>
+              {reflections.map((reflection: DisplayReflection) => (
+                <ListGroup.Item
+                  key={reflection.id}
+                  className="d-flex flex-row justify-content-between align-items-center"
+                >
+                  <p className="lead text-muted">{reflection.date}</p>
+                  <Link
+                    href={{
+                      pathname: "/reflections/[id]",
+                      query: { id: reflection.id },
+                    }}
+                  >
+                    <a className={`lead ${styles.link}`}>{reflection.title}</a>
+                  </Link>
+                  <p className="lead text-muted">{reflection.author}</p>
                 </ListGroup.Item>
               ))}
             </ListGroup>
@@ -78,7 +64,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const res = await fetch("https://eportfolio.vercel.app/api/reflection");
   console;
   const json = await res.json();
-  const reflections: Omit<MongoReflection, "_id"> = json.reflections;
+  const reflections: DisplayReflection = json.reflections;
   return {
     props: {
       reflections: reflections,

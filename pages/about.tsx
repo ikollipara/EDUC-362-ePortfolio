@@ -55,6 +55,10 @@ function AboutMe() {
               width={712}
               height={414}
               alt="2019 Bright Lights Reptiles Rock Group"
+              quality={100}
+              priority={true}
+              placeholder={"2019 Bright Lights Reptiles Rock! Class"}
+              className="pt-3"
             />
             <p className="text-muted text-center">
               2019 Bright Lights Reptiles Rock!
