@@ -48,7 +48,7 @@ function AboutMe() {
               and <a href="https://vercel.com/">Vercel</a>.
             </p>
             <Image
-              src="/Ian_BL_4272x2848.jpg"
+              src="/Ian_BL_4272x2848.webp"
               layout="responsive"
               objectFit="contain"
               objectPosition="center center"
