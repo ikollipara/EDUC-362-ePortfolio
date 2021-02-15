@@ -1,0 +1,8 @@
+.section {
+    white-space: pre-wrap;
+    overflow: auto;
+}
+
+.maximumRed {
+    background-color: #d62828;;
+}

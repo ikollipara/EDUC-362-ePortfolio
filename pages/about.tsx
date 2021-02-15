@@ -27,13 +27,13 @@ function AboutMe() {
       <div className="container">
         <div className="row">
           <div className="col-12 text-center">
-            <h1 className="display-3">About Me</h1>
+            <h1 className="display-3 heading-font">About Me</h1>
           </div>
         </div>
         <div className="row">
           <span className="col-1"></span>
           <div className="col-10 d-flex flex-column">
-            <p className="lead">
+            <p className="lead text-font">
               My name is Ian Kollipara, and I'm a Junior Standing at CUNE. I was
               born, and raised, in Lincoln, NE. I attended Trinity Lutheran
               Elementary and Lincoln Lutheran Jr/Sr High. I was a part of
@@ -63,7 +63,7 @@ function AboutMe() {
             <p className="text-muted text-center">
               2019 Bright Lights Reptiles Rock!
             </p>
-            <p className="lead pt-3">
+            <p className="lead text-font pt-3">
               I've wanted to teach since I was quite young. In fact, I can trace
               it all the way back to my first year of volunteering when I was 14
               years old. One of the older staff members approached me, and

@@ -9,6 +9,7 @@ import { MongoReflection, DisplayReflection } from "../../utils/typedefs";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Header from "../../components/header";
+import Head from "next/head";
 
 function ReflectionPage() {
   const router = useRouter();
@@ -29,11 +30,18 @@ function ReflectionPage() {
 
   return (
     <main>
+      <Head>
+        <title>
+          {slug.title} by {slug.author}
+        </title>
+      </Head>
       <Header />
       <div className="container">
         <div className="row">
           <span className="col-1"></span>
-          <h1 className="display-3 text-center col-10">{slug.title}</h1>
+          <h1 className="display-3 heading-font text-center col-10">
+            {slug.title}
+          </h1>
         </div>
         <div className="d-flex flex-row justify-content-between">
           <p className="lead">by {slug.author}</p>
@@ -43,7 +51,7 @@ function ReflectionPage() {
         <div className="row">
           <span className="col-1"></span>
           <article
-            className={`col-10`}
+            className={`col-10 text-font`}
             dangerouslySetInnerHTML={{ __html: slug.body }}
           ></article>
         </div>

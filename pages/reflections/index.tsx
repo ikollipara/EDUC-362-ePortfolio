@@ -6,13 +6,13 @@
 
 // Imports
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
-import fetch from "isomorphic-unfetch";
 import Link from "next/link";
 import Header from "../../components/header";
-import { DisplayReflection, MongoReflection } from "../../utils/typedefs";
+import { DisplayReflection } from "../../utils/typedefs";
 import styles from "../../styles/reflections.module.css";
 import Head from "next/head";
 import { ListGroup } from "react-bootstrap";
+import Image from "next/image";
 
 function Index({
   reflections,
@@ -23,12 +23,16 @@ function Index({
         <title>Reflections</title>
       </Head>
       <Header />
-      <div
-        className={`jumbotron-fluid bg-light text-white text-center ${styles.heroImage}`}
-      >
-        <div className="d-flex flex-column align-items-center">
-          <h1 className="display-2">Reflections</h1>
-        </div>
+      <Image
+        src="https://cdn.pixabay.com/photo/2018/01/03/05/33/the-sun-3057623_1280.jpg"
+        layout="responsive"
+        objectFit="cover"
+        width={720}
+        height={100}
+        priority={true}
+      />
+      <div className="d-flex flex-column align-items-center">
+        <h1 className="display-2 heading-font">Reflections</h1>
       </div>
       <div className="container">
         <div className="row">
@@ -38,18 +42,28 @@ function Index({
               {reflections.map((reflection: DisplayReflection) => (
                 <ListGroup.Item
                   key={reflection.id}
-                  className="d-flex flex-row justify-content-between align-items-center"
+                  className="d-flex flex-column justify-content-center"
                 >
-                  <p className="lead text-muted">{reflection.date}</p>
                   <Link
                     href={{
                       pathname: "/reflections/[id]",
                       query: { id: reflection.id },
                     }}
                   >
-                    <a className={`lead ${styles.link}`}>{reflection.title}</a>
+                    <a
+                      className={`display-4 text-font text-center ${styles.link}`}
+                    >
+                      {reflection.title}
+                    </a>
                   </Link>
-                  <p className="lead text-muted">{reflection.author}</p>
+                  <div className="d-flex flex-row justify-content-between">
+                    <p className="lead text-font text-muted">
+                      {reflection.date}
+                    </p>
+                    <p className="lead text-font text-muted">
+                      By: {reflection.author}
+                    </p>
+                  </div>
                 </ListGroup.Item>
               ))}
             </ListGroup>
@@ -62,7 +76,6 @@ function Index({
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const res = await fetch("https://eportfolio.vercel.app/api/reflection");
-  console;
   const json = await res.json();
   const reflections: DisplayReflection = json.reflections;
   return {

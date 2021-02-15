@@ -1,4 +1,3 @@
-import { v4 as uuidv4 } from "uuid";
 import { Db, MongoClient } from "mongodb";
 import type { NextApiRequest } from "next";
 
