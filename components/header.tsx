@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 import styles from "../styles/header.module.css";
 
@@ -6,7 +7,7 @@ function Header() {
     <nav>
       <Navbar className={styles.lemonMeringue} variant="light" expand="md">
         <Navbar.Brand className="text-font" href="/">
-          Ian Kollipara
+          <img src="/favicon.ico" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="nav" />
         <Navbar.Collapse id="nav">
