@@ -69,7 +69,10 @@ function Index() {
               <a href="/about" className="btn btn-outline-primary px-5">
                 About Me
               </a>
-              <a href="/resume" className="btn btn-outline-primary px-5">
+              <a
+                href="/ePortfolio/resume"
+                className="btn btn-outline-primary px-5"
+              >
                 Resume
               </a>
               <a href="/reflections" className="btn btn-outline-primary px-5">

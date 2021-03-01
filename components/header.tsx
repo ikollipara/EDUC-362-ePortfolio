@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/image";
 import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 import styles from "../styles/header.module.css";
 
@@ -13,7 +13,6 @@ function Header() {
         <Navbar.Collapse id="nav">
           <Nav className="mr-auto text-font">
             <Nav.Link href="/about">About Me</Nav.Link>
-            <Nav.Link href="/reflections">Reflections</Nav.Link>
             <NavDropdown
               title="ePortfolio"
               id="ePortfolio-dropdown"
