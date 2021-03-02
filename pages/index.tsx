@@ -75,9 +75,6 @@ function Index() {
               >
                 Resume
               </a>
-              <a href="/reflections" className="btn btn-outline-primary px-5">
-                Reflections
-              </a>
               <a
                 href="https://github.com/ikollipara"
                 className="btn btn-outline-primary px-5"
