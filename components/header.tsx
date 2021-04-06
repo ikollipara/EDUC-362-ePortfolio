@@ -13,6 +13,7 @@ function Header() {
         <Navbar.Collapse id="nav">
           <Nav className="mr-auto text-font">
             <Nav.Link href="/about">About Me</Nav.Link>
+            <Nav.Link href="/resources">Digital Toolbox</Nav.Link>
             <NavDropdown
               title="ePortfolio"
               id="ePortfolio-dropdown"

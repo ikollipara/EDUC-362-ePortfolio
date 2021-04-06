@@ -75,6 +75,9 @@ function Index() {
               >
                 Resume
               </a>
+              <a href="/resources" className="btn btn-outline-primary px-5">
+                Digital Toolbox
+              </a>
               <a
                 href="https://github.com/ikollipara"
                 className="btn btn-outline-primary px-5"
