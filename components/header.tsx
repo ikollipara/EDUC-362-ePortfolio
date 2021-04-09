@@ -22,6 +22,12 @@ function Header() {
               <NavDropdown.Item href="/ePortfolio/resume" className="text-font">
                 Resume
               </NavDropdown.Item>
+              <NavDropdown.Item
+                href="/ePortfolio/first_year_focus"
+                className="text-font"
+              >
+                First Year Focus
+              </NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
