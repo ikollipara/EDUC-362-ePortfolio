@@ -1,7 +1,14 @@
+/* pages/resources.tsx
+ * Ian Kollipara
+ * 2021.04.14
+ * Digital Toolbox Page
+ */
+
+// Imports
 import React from "react";
 import Header from "../components/header";
 import head from "next/head";
-import { Tabs, Tab, Row, Col, Card } from "react-bootstrap";
+import { Tabs, Tab, Card } from "react-bootstrap";
 
 function Resources() {
   return (

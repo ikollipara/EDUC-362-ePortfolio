@@ -1,4 +1,10 @@
-import Image from "next/image";
+/* components/header.tsx
+ * Ian Kollipara
+ * 2021.04.14
+ * Header Component
+ */
+
+// Imports
 import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 import styles from "../styles/header.module.css";
 

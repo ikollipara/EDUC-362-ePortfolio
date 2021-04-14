@@ -6,7 +6,7 @@
 
 // Imports
 import Head from "next/head";
-import { Col, Container, Jumbotron, Media, Row } from "react-bootstrap";
+import { Col, Container, Jumbotron, Row } from "react-bootstrap";
 import Header from "../components/header";
 import styles from "../styles/home.module.css";
 
@@ -101,7 +101,7 @@ function Index() {
                 />
                 <a href="https://instagram.com/ikollipara5">Instagram</a>
               </li>
-                          </ul>
+            </ul>
           </Col>
         </Row>
       </Container>

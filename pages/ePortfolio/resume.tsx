@@ -1,3 +1,10 @@
+/* pages/ePortfolio/resume.tsx
+ * Ian Kollipara
+ * 2021.04.14
+ * Resume Page
+ */
+
+// Imports
 import Head from "next/head";
 import Header from "../../components/header";
 
