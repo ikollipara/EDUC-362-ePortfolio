@@ -34,6 +34,12 @@ function Header() {
               >
                 First Year Focus
               </NavDropdown.Item>
+              <NavDropdown.Item
+                href="/ePortfolio/connected_educator_plan"
+                className="text-font"
+              >
+                Connected Educator Plan
+              </NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>

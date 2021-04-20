@@ -29,11 +29,11 @@ function FirstYearFocus() {
           <Row>
             <Col lg={1}></Col>
             <Col lg={10}>
-              <h4 className="text-font">
+              <h5 className="text-font">
                 <strong>Goal:</strong> To Create a Student-Driven Learning
                 Environment
-              </h4>
-              <h4 className="text-font">
+              </h5>
+              <h5 className="text-font">
                 <strong>Why: </strong>
                 The classroom is, arguably, the place students spend the most
                 time in. It is then of the utmost importance that students play
@@ -42,8 +42,8 @@ function FirstYearFocus() {
                 not be running the classroom. That is my job. Rather, students
                 will be taking ownership of their learning - and using
                 differentiation as a baseline - to achieve their potential.
-              </h4>
-              <h4 className="text-font">
+              </h5>
+              <h5 className="text-font">
                 <strong>How: </strong>
                 The fundemental keys to achieving this boil down to:
                 <ol>
@@ -55,7 +55,7 @@ function FirstYearFocus() {
                 <br />
                 Students must want this to work, just as much as I do. A room
                 full of uninspired, unmotivated, unenthusiastic kids can barely
-                learn when its teacher-driven, let alone when they're driving.
+                learn when it's teacher-driven, let alone when they're driving.
                 As such, student motivation and buy-in become important.
                 <br />
                 To achieve motivation and such I must first get to know my kids,
@@ -79,7 +79,7 @@ function FirstYearFocus() {
                 this goal will fail. I have to be just as much, if not more,
                 flexible than the curriculum. I must be inventive and most of
                 all, I must listen to my students and let them have a say.
-              </h4>
+              </h5>
               <Container>
                 <Row>
                   <Col lg={4} className="d-flex flex-column align-items-center">
@@ -121,11 +121,11 @@ function FirstYearFocus() {
           <Row>
             <Col lg={1}></Col>
             <Col lg={10}>
-              <h4 className="text-font">
+              <h5 className="text-font">
                 <strong>Goal:</strong> Ingrain Technology Fundementals in the 
                 Classroom
-              </h4>
-              <h4 className="text-font">
+              </h5>
+              <h5 className="text-font">
                 <strong>Why: </strong>
                 Technology is a fundemental aspect of modern life. As such, it is of
                 vital importance that students are not only competent, but actively learn
@@ -133,8 +133,8 @@ function FirstYearFocus() {
                 most important future skill that is not met in current education. This extends
                 beyond just simple word, excel, etc. but more into troubleshooting, coding, and 
                 problem solving.
-              </h4>
-              <h4 className="text-font">
+              </h5>
+              <h5 className="text-font">
                 <strong>How: </strong>
                 I provide a unique ability in this area, being my CS degree. As such I 
                 can help more in this technical aspects. I would begin by allowing more use
@@ -152,7 +152,7 @@ function FirstYearFocus() {
                 to the computer classes, along with more time dedicated to logic and problem
                 solving games. I would also have a unit dedicated to Office Suite Tool usage,
                 something that will most definitely become vital as they age.
-              </h4>
+              </h5>
               <Container>
                 <Row>
                   <Col lg={4} className="d-flex flex-column align-items-center">
