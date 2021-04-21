@@ -6,16 +6,16 @@
 
 // Imports
 import React from "react";
-import head from "next/head";
+import Head from "next/head";
 import Header from "../../components/header";
 import { Col, Row, Container } from "react-bootstrap";
 
 function FirstYearFocus() {
   return (
     <main>
-      <head>
+      <Head>
         <title>First Year Focus</title>
-      </head>
+      </Head>
       <article>
         <Header />
         <Container fluid>

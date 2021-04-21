@@ -6,16 +6,16 @@
 
 // Imports
 import React from "react";
-import head from "next/head";
+import Head from "next/head";
 import Header from "../../components/header";
 import { Col, Container, Row } from "react-bootstrap";
 
 function ConnectedEducatorPlan() {
   return (
     <main>
-      <head>
+      <Head>
         <title>Connected Educator Plan</title>
-      </head>
+      </Head>
       <Header />
       <Container fluid>
         <Row>

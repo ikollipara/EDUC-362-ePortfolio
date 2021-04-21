@@ -40,6 +40,19 @@ function Header() {
               >
                 Connected Educator Plan
               </NavDropdown.Item>
+              <NavDropdown.Item
+                href="/ePortfolio/philosophy"
+                className="text-font"
+              >
+                Philosophy of Education
+              </NavDropdown.Item>
+              <NavDropdown.Item
+                href="/ePortfolio/sample_lesson_plan"
+                className="text-font"
+              >
+                Sample Lesson Plan
+              </NavDropdown.Item>
+
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>

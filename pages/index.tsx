@@ -20,8 +20,8 @@ function Index() {
       <Jumbotron fluid className={styles.heroImage}>
         <div className="d-flex flex-column align-items-center text-white">
           <img src="/Ian.jpg" className="img-fluid rounded-circle" />
-          <h5 className="display-3 heading-font">Ian Kollipara's</h5>
-          <h5 className="display-4 text-font text-muted">ePortfolio</h5>
+          <h5 className="display-3 heading-font animate__animated animate__fadeInUp">Ian Kollipara's</h5>
+          <h5 className="display-4 text-font text-muted animate__animated animate__fadeInUp">ePortfolio</h5>
         </div>
       </Jumbotron>
       <Container fluid>
