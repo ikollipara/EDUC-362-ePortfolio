@@ -52,7 +52,12 @@ function Header() {
               >
                 Sample Lesson Plan
               </NavDropdown.Item>
-
+              <NavDropdown.Item
+                href="/ePortfolio/field_experience"
+                className="text-font"
+              >
+                Field Experience
+              </NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>

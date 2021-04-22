@@ -26,14 +26,15 @@ function Philosophy(){
         </Row>
         <Row>
           <Col lg={3}></Col>
-          <Col lg={6} className="d-flex flex-row align-items-center justify-content-center">
-            <img src="/Ian.jpg" alt="Ian Kollipara" className="img-fluid rounded-circle mr-3" />
+          <Col lg={6} className="d-flex flex-column align-items-center justify-content-center">
             <hr />
             <h2 className="text-font font-italic text-center">
               Education is an exploration to discover a passion.
               My job, therefore, is to facilitate this discovery of passion,
               and allow it to grow.
             </h2>
+            <hr />
+            <img src="/Ian.jpg" alt="Ian Kollipara" className="img-fluid rounded-circle mr-3" />
           </Col>
           <Col lg={3}></Col>
         </Row>
