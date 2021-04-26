@@ -38,6 +38,20 @@ function Philosophy(){
           </Col>
           <Col lg={3}></Col>
         </Row>
+        <Row>
+          <Col lg={3}></Col>
+          <Col lg={6}>
+            <hr />
+            <h4 className="text-font font-italic">
+              To expand, to facilitate a discovery of passion requires that the 
+              student's needs are met in such a way that learning can happen. These
+              needs are: Social, Emotional, and Physical. All of these must be met for
+              a student to learn, but to discover a passion requires that a teacher be
+              passionate. It requires that I be passionate, not just about my students,
+              but about their learning.
+            </h4>
+          </Col>
+        </Row>
       </Container>
     </main>
   )
