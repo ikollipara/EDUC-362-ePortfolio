@@ -7,6 +7,7 @@
 // Imports
 import React from "react";
 import Head from "next/head";
+import Image from "next/image";
 import Header from "../../components/header";
 import { Col, Row, Container } from "react-bootstrap";
 
@@ -29,11 +30,19 @@ function FirstYearFocus() {
           <Row>
             <Col lg={1}></Col>
             <Col lg={10}>
-              <h5 className="text-font">
+                <Image
+                  src="/worktime.jpg"
+                  layout="responsive"
+                  objectFit="cover"
+                  width={720}
+                  height={100}
+                  priority={true}
+                />
+                <h3 className="text-font mt-5">
                 <strong>Goal:</strong> To Create a Student-Driven Learning
                 Environment
-              </h5>
-              <h5 className="text-font">
+              </h3>
+                            <h5 className="text-font">
                 <strong>Why: </strong>
                 The classroom is, arguably, the place students spend the most
                 time in. It is then of the utmost importance that students play
@@ -121,10 +130,18 @@ function FirstYearFocus() {
           <Row>
             <Col lg={1}></Col>
             <Col lg={10}>
-              <h5 className="text-font">
+                <Image
+                  src="/integrated.jpg"
+                  layout="responsive"
+                  objectFit="cover"
+                  width={720}
+                  height={100}
+                  priority={true}
+                />
+              <h3 className="text-font mt-5">
                 <strong>Goal:</strong> Ingrain Technology Fundementals in the 
                 Classroom
-              </h5>
+              </h3>
               <h5 className="text-font">
                 <strong>Why: </strong>
                 Technology is a fundemental aspect of modern life. As such, it is of
